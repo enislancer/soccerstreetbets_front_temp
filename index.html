@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+
+  <title>Responsive Sidebar Navigation | CodyHouse</title>
+</head>
+<body>
+  <header class="cd-main-header js-cd-main-header" >
+    <div class="cd-logo-wrapper">
+      <a href="#" class="cd-logo" style="color: white;">
+        SOCCERSTREET BETS
+      </a>
+      
+    </div>
+    
+    <div class="cd-search js-cd-search">
+      <form>
+        <input class="reset" type="search" style="height: 50px;" placeholder="Search...">
+      </form>
+    </div>
+  
+    <button style = "height: 50px;" class="reset cd-nav-trigger js-cd-nav-trigger" aria-label="Toggle menu"><span></span></button>
+  
+    <ul class="cd-nav__list js-cd-nav__list" style="height: 50px;">
+      <li class="cd-nav__item"><a href="#0">Login</a></li>
+      <li class="cd-nav__item"><a href="#0">Register</a></li>
+      <li class="cd-nav__item cd-nav__item--has-children cd-nav__item--account js-cd-item--has-children">
+        <a href="#0">
+          <img src="assets/img/cd-avatar.svg" alt="avatar">
+          <span>Settings</span>
+        </a>
+    
+        <!-- <ul class="cd-nav__sub-list">
+          <li class="cd-nav__sub-item"><a href="#0">My Account</a></li>
+          <li class="cd-nav__sub-item"><a href="#0">Edit Account</a></li>
+          <li class="cd-nav__sub-item"><a href="#0">Logout</a></li>
+        </ul> -->
+      </li>
+    </ul>
+  </header> <!-- .cd-main-header -->
+  
+  <main class="cd-main-content">
+    <div style="padding: 10px;background-color: white;">  
+        <nav class="cd-side-nav js-cd-side-nav">
+        <ul class="cd-side__list js-cd-side__list">
+            <li class="cd-side__label"><span>My Leagues</span></li>
+            <li class="cd-side__item cd-side__item--has-children  js-cd-item--has-children">
+                <a href="#0" >
+                    <img style="width: 20px;margin-right: 10px;" src="https://flagcdn.com/w40/gb-eng.png"
+                    
+                    alt="England"> 
+                    <span>Premier League</span>
+                </a>
+    
+            </li>
+
+            <li class="cd-side__item cd-side__item--has-children js-cd-item--has-children">
+                <a href="#0">
+                    <img style="width: 20px;margin-right: 10px;" src="https://www.flashscore.com/res/_fs/build/fr.f5e7288.png"> 
+                    <span>Ligue 1</span>
+                </a>
+            </li>
+        
+            <li class="cd-side__item cd-side__item--has-children  js-cd-item--has-children">
+                <a href="#0">
+                    <img style="width: 20px;margin-right: 10px;" src="https://www.flashscore.com/res/_fs/build/de.494bda8.png"> 
+                    <span>Bundesliga</span>
+                </a>
+            </li>
+
+            <li class="cd-side__item cd-side__item--has-children  js-cd-item--has-children">
+                <a href="#0">
+                    <img style="width: 20px;margin-right: 10px;" src="https://www.flashscore.com/res/_fs/build/it.225fa57.png"> 
+                    <span> Serie A</span>
+                </a>
+            </li>
+
+            <li class="cd-side__item cd-side__item--has-children  js-cd-item--has-children">
+                <a href="#0">
+                    <img style="width: 20px;margin-right: 10px;" src="https://www.flashscore.com/res/_fs/build/es.ac54d02.png"> 
+                    <span>LaLiga</span>
+                </a>
+            </li>
+        </ul>
+        
+        <ul class="cd-side__list js-cd-side__list">
+            <li class="cd-side__label"><span>My Teams</span></li>
+            <li class="cd-side__item cd-side__item--has-children  js-cd-item--has-children">
+            <a href="#0">Real Madrid</a>
+            
+            <!-- <ul class="cd-side__sub-list">
+                <li class="cd-side__sub-item"><a href="#0">All Bookmarks</a></li>
+                <li class="cd-side__sub-item"><a href="#0">Edit Bookmark</a></li>
+                <li class="cd-side__sub-item"><a href="#0">Import Bookmark</a></li>
+            </ul> -->
+            </li>
+
+            <li class="cd-side__item cd-side__item--has-children cd-side__item--images js-cd-item--has-children">
+            <a href="#0">FC Barcelona</a>
+            
+            
+            </li>
+        
+            <li class="cd-side__item cd-side__item--has-children cd-side__item--users js-cd-item--has-children">
+            <a href="#0">Liverpool</a>
+           
+            </li>
+            <li class="cd-side__item cd-side__item--has-children cd-side__item--users js-cd-item--has-children">
+                <a href="#0">Manchester City</a>
+               
+                </li>
+        </ul>
+        
+        
+        </nav>
+    </div>
+    <div style="padding: 10px;background-color: white;">
+        <div class="cd-content-wrapper">
+            <div id="fixture_content" class="">	
+                <div id="fixture_content_header">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a  href="#all_games" data-toggle="tab" class="tab_long_text">All Games</a>
+                            <a  href="#all_games" data-toggle="tab" class="tab_short_text">All</a>
+                        </li>
+                        <li>
+                            <a href="#live_games" data-toggle="tab" class="tab_long_text">LIVE Games</a>
+                            <a  href="#live_games" data-toggle="tab" class="tab_short_text">LIVE</a>
+                        </li>
+                        <li>
+                            <a href="#my_games" data-toggle="tab" class="tab_long_text">My Games</a>
+                            <a  href="#my_games" data-toggle="tab" class="tab_short_text">My</a>
+                        </li>
+                        <li>
+                            <a href="#odds" data-toggle="tab">Odds</a>
+                        </li>
+                        <li>
+                            <a href="#finished" data-toggle="tab">Finished</a>
+                        </li>
+                        <li>
+                            <a href="#scheduled" data-toggle="tab">Scheduled</a>
+                        </li>
+                    </ul>
+                    <div class="input-group date" data-date-format="dd.mm.yyyy">
+                        <input  id="select-date" type="text" class="form-control" placeholder="dd.mm.yyyy" style="z-index: 0;">
+                        <div class="input-group-addon" >
+                          <span class="glyphicon glyphicon-th"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content ">
+                    <div class="tab-pane active" id="all_games">
+                        <div class="container">
+                            <div class="accordion-option">
+                              <h3 class="title">All Games</h3>
+                              <a href="javascript:void(0)" class="toggle-accordion active" accordion-id="#accordion"></a>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                             
+                              <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                  <h4 class="panel-title">
+                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <img style="width: 20px;margin-right: 10px;" src="https://flagcdn.com/w40/gb-eng.png"
+                    
+                                        alt="England"> 
+                                        <span>Premier League</span>
+                                    </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                  <div class="panel-body">
+                                    <div id="g_1_dCLc01XD" title="Click for match detail!" class="event__match event__match--static event__match--oneLine ">
+                                        <span class="event__check--hidden"></span>
+                                        <div class="event__time">14.03. 21:15</div>
+                                        <img class="event__logo event__logo--home" loading="lazy" src="https://www.flashscore.com/res/image/data/GhGV3qjT-rBodzytr.png">
+                                        <div class="event__participant event__participant--home fontBold">Manchester Utd</div>
+                                        <img class="event__logo event__logo--away" loading="lazy" src="https://www.flashscore.com/res/image/data/YeSfKGlC-Y720XloT.png">
+                                        <div class="event__participant event__participant--away">West Ham</div>
+                                        <div class="event__scores fontBold"><span>1</span>&nbsp;-&nbsp;<span>0</span></div>
+                                        <div class="event__part">(0&nbsp;-&nbsp;0)</div>
+                                  </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                  <h4 class="panel-title">
+                                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    <img style="width: 20px;margin-right: 10px;" src="https://www.flashscore.com/res/_fs/build/fr.f5e7288.png"> 
+                                    <span>Ligue 1</span>
+                                  </a>
+                                </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                  <div class="panel-body">
+                                    
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                  <h4 class="panel-title">
+                                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                    <img style="width: 20px;margin-right: 10px;" src="https://www.flashscore.com/res/_fs/build/de.494bda8.png"> 
+                                    <span>Bundesliga</span>
+                                  </a>
+                                </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                                  <div class="panel-body">
+                                    
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                  <h4 class="panel-title">
+                                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseThree">
+                                    <img style="width: 20px;margin-right: 10px;" src="https://www.flashscore.com/res/_fs/build/it.225fa57.png"> 
+                                    <span> Serie A</span>
+                                  </a>
+                                </h4>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                                  <div class="panel-body">
+                                    
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingThree">
+                                  <h4 class="panel-title">
+                                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseThree">
+                                    <img style="width: 20px;margin-right: 10px;" src="https://www.flashscore.com/res/_fs/build/es.ac54d02.png"> 
+                                    <span>LaLiga</span>
+                                  </a>
+                                </h4>
+                                </div>
+                                <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                                  <div class="panel-body">
+                                    
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                    </div>
+                    <div class="tab-pane" id="live_games">
+                        <h3>Notice the gap between the content and tab after applying a background color</h3>
+                    </div>
+                    <div class="tab-pane" id="my_games">
+                        <h3>add clearfix to tab-content (see the css)</h3>
+                    </div>
+                    <div class="tab-pane" id="odds">
+                        <h3>add clearfix to tab-content (see the css)</h3>
+                    </div>
+                    <div class="tab-pane" id="finished">
+                        <h3>add clearfix to tab-content (see the css)</h3>
+                    </div>
+                    <div class="tab-pane" id="scheduled">
+                        <h3>add clearfix to tab-content (see the css)</h3>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- .content-wrapper -->
+    </div>
+  </main> <!-- .cd-main-content -->
+
+
+
+  <script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+  <script src="assets/js/menu-aim.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+  <script>
+      $(document).ready(function () {
+        $('.input-group.date').datepicker({format: "dd.m.yyyy"}); 
+        today_date = new Date();
+     
+        $("#select-date").val(today_date.getDate() + "." + (today_date.getMonth()+1) + "." + today_date.getFullYear());
+        $(".toggle-accordion").on("click", function() {
+            var accordionId = $(this).attr("accordion-id"),
+            numPanelOpen = $(accordionId + ' .collapse.in').length;
+            
+            $(this).toggleClass("active");
+
+            if (numPanelOpen == 0) {
+            openAllPanels(accordionId);
+            } else {
+            closeAllPanels(accordionId);
+            }
+        })
+
+        openAllPanels = function(aId) {
+            console.log("setAllPanelOpen");
+            $(aId + ' .panel-collapse:not(".in")').collapse('show');
+        }
+        closeAllPanels = function(aId) {
+            console.log("setAllPanelclose");
+            $(aId + ' .panel-collapse.in').collapse('hide');
+        }
+    });
+  </script>
+</body>
+</html>
